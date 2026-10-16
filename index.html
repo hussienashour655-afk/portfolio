@@ -4,117 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hussein Ashour | Portfolio</title>
-    <meta name="description" content="Hussein Ashour - Computer Science and AI student focused on programming, problem solving, and data science.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: Arial, sans-serif;
-            background: #080d19;
-            color: #f4f7ff;
-            line-height: 1.7;
-        }
-        nav {
-            display: flex; justify-content: space-between;
-            align-items: center; padding: 22px 8%;
-            border-bottom: 1px solid #1b2942;
-        }
-        .logo { font-size: 22px; font-weight: bold; color: #60a5fa; }
-        nav a { color: #cbd5e1; text-decoration: none; margin-left: 22px; }
-        nav a:hover { color: #60a5fa; }
-        .hero {
-            min-height: 75vh; display: flex; flex-direction: column;
-            justify-content: center; padding: 80px 10%; 
-            background: radial-gradient(ellipse at top right, #142b50, #080d19 65%);
-        }
-        .tag { color: #60a5fa; letter-spacing: 2px; font-size: 13px; }
-        h1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.15; margin: 20px 0; }
-        h1 span { color: #60a5fa; }
-        .hero p { max-width: 650px; color: #a9b6ca; font-size: 18px; }
-        .btn {
-            display: inline-block; background: #2563eb; color: white;
-            text-decoration: none; padding: 12px 24px; border-radius: 8px;
-            margin-top: 28px; margin-right: 10px;
-        }
-        .btn.secondary { background: transparent; border: 1px solid #344563; }
-        section { padding: 75px 10%; }
-        h2 { font-size: 32px; margin-bottom: 22px; }
-        h2 span { color: #60a5fa; }
-        .muted { color: #a9b6ca; max-width: 800px; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 20px; margin-top: 28px; }
-        .card { background: #101a2b; border: 1px solid #243550; padding: 25px; border-radius: 14px; }
-        .card h3 { margin-bottom: 10px; color: #93c5fd; }
-        .card p { color: #a9b6ca; }
-        .skills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
-        .skills span { padding: 9px 15px; background: #12213a; border: 1px solid #29466e; border-radius: 7px; color: #bfdbfe; }
-        footer { text-align: center; padding: 30px; color: #94a3b8; border-top: 1px solid #1b2942; }
-        @media(max-width:600px) {
-            nav { padding: 18px 5%; flex-wrap: wrap; gap: 12px; }
-            nav a { margin-left: 10px; font-size: 13px; }
-            .hero, section { padding: 55px 7%; }
-        }
-    </style>
+    <meta name="theme-color" content="#080d19">
+    <meta name="description" content="Hussein Ashour's portfolio. Computer Science & AI student interested in programming, problem solving, and data science.">
+    <title>Hussein Ashour | Computer Science & AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="logo">HA.</div>
-        <div>
+
+    <nav class="navbar">
+        <a class="logo" href="#home" aria-label="Home">HA<span>.</span></a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#education">Education</a>
+            <a href="#contact" class="nav-contact">Let's Talk <span>↗</span></a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="tag">COMPUTER SCIENCE & AI</div>
-        <h1>Hi, I'm Hussein<br><span>Ashour.</span></h1>
-        <p>I build my skills in programming, problem solving, AI, and data science to turn ideas into practical solutions.</p>
-        <div>
-            <a class="btn" href="#projects">Explore My Work</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
-        </div>
-    </header>
+    <main>
+        <header class="hero" id="home">
+            <div class="hero-content">
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    COMPUTER SCIENCE & AI
+                </div>
 
-    <section id="about">
-        <h2>About <span>Me</span></h2>
-        <p class="muted">I'm studying Computer Science & AI at Benha National University, expected to graduate in 2028. I'm developing my technical skills through practical learning and training at DEPI, with an interest in building useful solutions to real-world problems.</p>
-    </section>
+                <p class="eyebrow">HELLO, WORLD! I'M</p>
 
-    <section id="skills">
-        <h2>My <span>Skills</span></h2>
-        <p class="muted">Technologies and skills I'm developing through study and practice.</p>
-        <div class="skills">
-            <span>C++</span><span>Python</span><span>Problem Solving</span><span>Data Science</span><span>Artificial Intelligence</span><span>Continuous Learning</span>
-        </div>
-    </section>
+                <h1>Hussein<br><span>Ashour.</span></h1>
 
-    <section id="projects">
-        <h2>Featured <span>Projects</span></h2>
-        <div class="cards">
-            <div class="card">
-                <h3>C++ Calculator</h3>
-                <p>A calculator project built to practice programming fundamentals and basic arithmetic operations.</p>
+                <h2 class="hero-subtitle">
+                    Turning ideas into <span>practical solutions.</span>
+                </h2>
+
+                <p class="hero-description">
+                    I develop programming and problem-solving skills to help
+                    turn ideas into useful digital solutions. I'm exploring
+                    Artificial Intelligence and Data Science through study,
+                    training, and hands-on projects.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        Explore My Work <span>↗</span>
+                    </a>
+                    <a class="button button-outline" href="#contact">
+                        Get in Touch
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span>📍 Egypt</span>
+                    <span>🎓 Benha National University</span>
+                    <span>💻 C++ · Python</span>
+                </div>
             </div>
-            <div class="card">
-                <h3>Python Practice</h3>
-                <p>Small programs exploring Python fundamentals, conditions, loops, and data structures.</p>
-            </div>
-            <div class="card">
-                <h3>Data Science Journey</h3>
-                <p>Developing data analysis skills through training, exercises, and practical learning projects.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Let's <span>Connect</span></h2>
-        <p class="muted">Interested in connecting about projects, learning opportunities, or freelance work? Feel free to reach out.</p>
-        <a class="btn" href="mailto:hussienashour655@gmail.com">Email Me</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/hussienashour02/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </section>
+            <div class="hero-visual" aria-label="Programming and technology">
+                <div class="visual-glow"></div>
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span>developer.cpp</span>
+                    </div>
+                    <div class="code-content">
+                        <p><span class="line-number">01</span> <span class="purple">#include</span> <span class="green">&lt;iostream&gt;</span></p>
+                        <p><span class="line-number">02</span></p>
+                        <p><span class="line-number">03</span> <span class="blue">int</span> main() {</p>
+                        <p><span class="line-number">04</span> &nbsp;&nbsp;<span class="purple">std::cout</span> &lt;&lt;</p>
+                        <p><span class="line-number">05</span> &nbsp;&nbsp;<span class="green">"Keep learning."</span>;</p>
+                        <p><span class="line-number">06</span> &nbsp;&nbsp;<span class="blue">return</span> <span class="orange">0</span>;</p>
+                        <p><span class="line-number">07</span> }</p>
+                        <div class="terminal-line">
+                            <span class="terminal-dot"></span>
+                            Building skills, one project at a time.
+                        </div>
+                    </div>
+                </div>
 
-    <footer>© 2026 Hussein Ashour. Built with HTML & CSS.</footer>
+                <div class="floating-chip chip-one">C++</div>
+                <div class="floating-chip chip-two">Python</div>
+                <div class="floating-chip chip-three">AI / DS</div>
+            </div>
+        </header>
+
+        <section class="section about-section" id="about">
+            <div class="section-heading">
+                <span class="section-index">01 / ABOUT</span>
+                <h2>Value first.<br><span>Technology second.</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p class="about-lead">
+                    I believe technology is most valuable when it solves
+                    a real problem and makes something easier, clearer,
+                    or more efficient.
+                </p>
+                <p class="muted">
+                    I'm Hussein, a Computer Science & AI student at
+                    Benha National University, expected to graduate in 2028.
+                    Through my studies and DEPI training, I'm building a
+                    foundation in programming, analytical thinking, and
+                    data-driven problem solving. My goal is to keep learning
+                    and apply these skills to meaningful projects.
+                </p>
+                <a class="text-link" href="#contact">Let's connect <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-heading">
+                <span class="section-index">02 / SKILLS</span>
+                <h2>Tools I use to<br><span>build and learn.</span></h2>
+                <p class="muted">
+                    My current technical foundation and areas of interest.
+                </p>
+            </div>
+
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">01</div>
+                    <h3>Programming</h3>
+                    <p>Building a foundation in writing code and understanding programming concepts.</p>
+                    <div class="skill-tags"><span>C++</span><span>Python</span></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">02</div>
+                    <h3>Problem Solving</h3>
+                    <p>Breaking problems into smaller steps and developing logical solutions.</p>
+                    <div class="skill-tags"><span>Logic</span><span>Algorithms</span></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">03</div>
+                    <h3>Data Science</h3>
+                    <p>Learning how to explore data, identify patterns, and communicate insights.</p>
+                    <div class="skill-tags"><span>Data Analysis</span><span>Visualization</span></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">04</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Exploring AI concepts and building the foundation for future practical projects.</p>
+                    <div class="skill-tags"><span>AI Fundamentals</span><span>Continuous Learning</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="section-heading">
+                <span class="section-index">03 / PROJECTS</span>
+                <h2>Learning through<br><span>hands-on practice.</span></h2>
+                <p class="muted">
+                    A starting point for showcasing my practical work.
+                    I'll continue adding completed projects and source code.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">PROJECT 01</span>
+                        <span class="project-symbol">⌘</span>
+                    </div>
+                    <h3>C++ Calculator</h3>
+                    <p>
+                        A programming practice project for implementing
+                        arithmetic operations and strengthening C++ fundamentals.
+                    </p>
+                    <div class="project-tags"><span>C++</span><span>Logic</span></div>
+                    <span class="project-note">Source code link coming soon</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">PROJECT 02</span>
+                        <span class="project-symbol">{ }</span>
+                    </div>
+                    <h3>Python Practice</h3>
+                    <p>
+                        Small exercises covering variables, conditions, loops,
+                        and data structures while developing programming skills.
+                    </p>
+                    <div class="project-tags"><span>Python</span><span>Fundamentals</span></div>
+                    <span class="project-note">Source code link coming soon</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">PROJECT 03</span>
+                        <span class="project-symbol">▤</span>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>
+                        An area of practical learning focused on data cleaning,
+                        exploratory analysis, visualization, and insights.
+                    </p>
+                    <div class="project-tags"><span>Data Science</span><span>Analysis</span></div>
+                    <span class="project-note">Project details coming soon</span>
+                </article>
+            </div>
+
+            <p class="project-disclaimer">
+                Project descriptions represent learning work. Add repository links
+                and actual results when the corresponding projects are ready.
+            </p>
+        </section>
+
+        <section class="section education-section" id="education">
+            <div class="section-heading">
+                <span class="section-index">04 / EDUCATION & TRAINING</span>
+                <h2>Building my<br><span>technical foundation.</span></h2>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div>
+                        <span class="timeline-date">EXPECTED GRADUATION · 2028</span>
+                        <h3>Benha National University</h3>
+                        <p class="timeline-subtitle">Computer Science & Artificial Intelligence</p>
+                        <p class="muted">
+                            Developing knowledge in programming, computer science,
+                            logical thinking, and AI-related subjects.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div>
+                        <span class="timeline-date">TRAINING</span>
+                        <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
+                        <p class="timeline-subtitle">Data Science & AI learning journey</p>
+                        <p class="muted">
+                            Developing technical knowledge through training and
+                            practical learning activities.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <span class="section-index">05 / CONTACT</span>
+            <h2>Have an idea?<br><span>Let's talk.</span></h2>
+            <p>
+                Open to connecting about projects, learning opportunities,
+                collaboration, and suitable freelance work.
+            </p>
+            <div class="contact-actions">
+                <a class="button button-primary"
+                   href="mailto:hussienashour655@gmail.com">
+                    Email Me <span>↗</span>
+                </a>
+                <a class="button button-outline"
+                   href="https://www.linkedin.com/in/hussienashour02/"
+                   target="_blank" rel="noopener noreferrer">
+                    LinkedIn <span>↗</span>
+                </a>
+                <a class="button button-outline"
+                   href="https://github.com/hussienashour655-afk"
+                   target="_blank" rel="noopener noreferrer">
+                    GitHub <span>↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="logo" href="#home">HA<span>.</span></a>
+        <p>Designed and built by Hussein Ashour.</p>
+        <p>© <span id="year">2026</span> All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
